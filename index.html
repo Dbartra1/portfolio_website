@@ -3,7 +3,6 @@
   PORTFOLIO — 2026 EDITION · v6 (refined)
   design lineage: TDR (the quiet sleeves) / wipeout (the menus) / swiss grids
   hello, view-source enjoyer. press ` on the page. try 'grid' in the terminal.
-  TO MAKE IT YOURS: search "EDIT ME" — name, bio, email, GH_USER, meta tags
 -->
 <html lang="en" data-zone="mint">
 <head>
@@ -11,13 +10,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0F1312">
-<!-- EDIT ME: metadata -->
 <meta name="description" content="Portfolio of Dillon Bartram — software engineer in public service, building the systems behind a county animal shelter. C#, Python, T-SQL, and a well-loved homelab.">
 <meta property="og:title" content="Dillon Bartram™ — Portfolio">
 <meta property="og:description" content="Software engineer in public service. Dependable, humane software for the people and animals closest to home.">
 <meta property="og:type" content="website">
-<title>Dillon Bartram™ — Portfolio</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M10 30 L10 12 L24 12 L24 22 L14 22' fill='none' stroke='%238CF5C9' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<meta property="og:url" content="https://dbcis.org">
+<meta property="og:image" content="https://dbcis.org/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dillon Bartram™ — Portfolio">
+<meta name="twitter:description" content="Software engineer in public service. Dependable, humane software for the people and animals closest to home.">
+<meta name="twitter:image" content="https://dbcis.org/og-card.png">
+<title>D:\ Dillon Bartram™ — Portfolio</title>
+<link rel="canonical" href="https://dbcis.org">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ctext x='20' y='29' text-anchor='middle' font-family='ui-monospace,SFMono-Regular,Menlo,monospace' font-weight='700' font-size='22' fill='%238FFFCB'%3ED:%5C%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -28,13 +35,14 @@
   "name": "Dillon Bartram",
   "jobTitle": "Software Engineer",
   "worksFor": {"@type": "GovernmentOrganization", "name": "County Government, Colorado"},
+  "url": "https://dbcis.org",
   "sameAs": [
     "https://github.com/Dbartra1",
     "https://github.com/ergane-daemon",
     "https://www.linkedin.com/in/dillonbartramcis/"
   ]
 }
-</script><!-- EDIT ME: add "url" once you have a domain -->
+</script>
 <style>
   @property --acc{syntax:'<color>';inherits:true;initial-value:#8FFFCB}
   :root{
@@ -113,10 +121,10 @@
     padding:22px 0;transition:background .5s,border-color .5s;
   }
   .rail::after{content:"";position:absolute;top:0;right:-1px;width:1px;height:calc(var(--p,0)*1%);background:var(--acc)}
-  .rail .glyph{width:34px;height:34px;display:block}
-  .rail .glyph path{fill:none;stroke:var(--acc);stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
-  .rail .glyph:hover{animation:spin .9s ease-in-out 1}
-  @keyframes spin{to{transform:rotate(360deg)}}
+  .rail .glyph{font-family:var(--mono);font-weight:700;font-size:19px;letter-spacing:-.02em;color:var(--acc);display:block;text-align:center;line-height:1;padding:4px 0;transition:transform .35s cubic-bezier(.2,.9,.2,1),letter-spacing .35s}
+  .rail .glyph:hover{transform:translateY(-1px);letter-spacing:0}
+  .rail .glyph .cursor{display:inline-block;width:.5em;background:var(--acc);color:transparent;margin-left:2px;animation:blink 1.1s steps(2) infinite}
+  @keyframes blink{50%{opacity:0}}
   .rail nav{flex:1;display:flex;flex-direction:column;justify-content:center;gap:26px}
   .rail nav a{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);transition:color .2s;padding:2px}
   .rail nav a:hover{color:var(--ink)}
@@ -372,9 +380,7 @@
 
 <!-- ── LEFT RAIL ── -->
 <header class="rail">
-  <a href="#index" aria-label="Top">
-    <svg class="glyph" viewBox="0 0 40 40" aria-hidden="true"><path d="M10 30 L10 12 L24 12 L24 22 L14 22"/></svg>
-  </a>
+  <a href="#index" class="glyph" aria-label="Top" title="D:\ — home drive"><span>D:\</span><span class="cursor" aria-hidden="true">_</span></a>
   <nav aria-label="Sections">
     <a href="#index" data-nav="index">00<span class="full"> — INDEX</span></a>
     <a href="#work" data-nav="work">01<span class="full"> — WORK</span></a>
@@ -593,7 +599,6 @@
           <p>Two years on the helpdesk earned me a move to application development, and I've been there since — building the systems behind the county animal shelter and working directly with the Assessor's office in C#, Python, and T-SQL. Off the clock: homelab and media archival, 3D printing, local AI and its ethics, generative design and topology optimization, and cars.</p>
         </div>
         <div class="meters" id="meters">
-          <!-- EDIT ME: tune these numbers to your own honest read -->
           <div class="meter"><span class="mlabel">App development</span><div class="bar"><div class="fill" data-w="90%"></div></div><span class="pct">90</span></div>
           <div class="meter"><span class="mlabel">Data &amp; T-SQL</span><div class="bar"><div class="fill" data-w="85%"></div></div><span class="pct">85</span></div>
           <div class="meter"><span class="mlabel">Local AI · Homelab</span><div class="bar"><div class="fill" data-w="80%"></div></div><span class="pct">80</span></div>
@@ -620,9 +625,8 @@
     <div class="numeral" aria-hidden="true">05</div>
     <div>
       <div class="sec-head"><h2>Open a channel</h2><span class="jp" lang="ja">連絡</span></div>
-      <p class="sec-intro">Questions about the shelter systems, the topology solver, local AI, or public-interest tech in general — the channel is open and monitored by a human. LinkedIn is the fastest route for now.</p>
+      <p class="sec-intro">Questions about the shelter systems, the topology solver, local AI, or public-interest tech in general — the channel is open and monitored by a human. LinkedIn is the fastest route.</p>
       <div class="mailwrap">
-        <!-- EDIT ME: when you have an email, swap this for <a class="bigmail" href="mailto:...">the address</a> -->
         <a class="bigmail" href="https://www.linkedin.com/in/dillonbartramcis/" target="_blank" rel="noopener">Message me on LinkedIn</a>
         <button class="copybtn" id="copyMail" aria-label="Copy LinkedIn URL">Copy link ⧉</button>
       </div>
@@ -666,30 +670,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-/* ══ CONFIG ══ EDIT ME */
 const GH_USER = 'Dbartra1';
-const CONTACT = 'https://www.linkedin.com/in/dillonbartramcis/'; // swap to a mailto address once your email exists
+const CONTACT = 'https://www.linkedin.com/in/dillonbartramcis/';
 const HIDE_FORKS = true;
 
 const $=id=>document.getElementById(id);
 const root=document.documentElement;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-/* GSAP is an enhancement layer — everything falls back cleanly without it */
 const G=(window.gsap&&window.ScrollTrigger&&!reduced)?(gsap.registerPlugin(ScrollTrigger),gsap):null;
 
-/* honor OS colour preference on first load (site default: dark) */
 if(matchMedia('(prefers-color-scheme: light)').matches) root.classList.add('light');
 
-/* ── clock ── */
 setInterval(()=>{ $('clock').textContent=new Date().toTimeString().slice(0,5) },1000);
 
-/* ── scroll progress ── */
 addEventListener('scroll',()=>{
   const max=document.documentElement.scrollHeight-innerHeight;
   document.querySelector('.rail').style.setProperty('--p',max>0?(scrollY/max*100):0);
 },{passive:true});
 
-/* ── colour zones + active nav ── */
 let accMode='auto';
 const zoneIO=new IntersectionObserver(es=>{
   es.forEach(e=>{
@@ -704,7 +702,6 @@ const zoneIO=new IntersectionObserver(es=>{
 },{rootMargin:'-45% 0px -45% 0px'});
 document.querySelectorAll('section[data-zone]').forEach(s=>zoneIO.observe(s));
 
-/* ── accent swatches ── */
 function setAccent(mode,quiet){
   accMode=mode;
   if(mode!=='auto') root.dataset.zone=mode;
@@ -713,7 +710,6 @@ function setAccent(mode,quiet){
 }
 document.querySelectorAll('.swatches button').forEach(b=>b.addEventListener('click',()=>setAccent(b.dataset.acc)));
 
-/* ── theme toggle (with view transition when available) ── */
 function setTheme(light){
   const apply=()=>root.classList.toggle('light',light);
   (document.startViewTransition && !reduced) ? document.startViewTransition(apply) : apply();
@@ -724,10 +720,8 @@ $('themeToggle').addEventListener('click',()=>{
   toast(toLight?'Theme: <i>sleeve</i> (light)':'Theme: <i>void</i> (dark)');
 });
 
-/* ── marquee loop ── */
 $('mq').innerHTML+=$('mq').innerHTML;
 
-/* ── work hover + keyboard preview ── */
 (function(){
   const pv=$('preview'); if(!pv) return;
   const panes=pv.querySelectorAll('svg');
@@ -744,7 +738,6 @@ $('mq').innerHTML+=$('mq').innerHTML;
   });
 })();
 
-/* ── reveal on scroll: GSAP batch stagger, IO fallback ── */
 (function(){
   if(G){
     ScrollTrigger.batch('.rv',{
@@ -760,23 +753,19 @@ $('mq').innerHTML+=$('mq').innerHTML;
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 })();
 
-/* ── scroll choreography (GSAP layer, desktop + full-motion only) ── */
 if(G) G.matchMedia().add('(min-width: 900px)',()=>{
-  /* hero: name rows drift, arrow recedes as you leave the fold */
   G.to('.hero-arrow',{x:-90,opacity:.22,ease:'none',
     scrollTrigger:{trigger:'#index',start:'top top',end:'bottom top',scrub:.5}});
   G.to('h1 .row.b',{x:-46,ease:'none',
     scrollTrigger:{trigger:'#index',start:'top top',end:'bottom top',scrub:.5}});
   G.to('h1 .row:not(.b)',{x:46,ease:'none',
     scrollTrigger:{trigger:'#index',start:'top top',end:'bottom top',scrub:.5}});
-  /* sticky numerals breathe in as their section arrives */
   G.utils.toArray('.numeral').forEach(n=>{
     G.fromTo(n,{opacity:.12},{opacity:.5,ease:'none',
       scrollTrigger:{trigger:n.closest('section'),start:'top 85%',end:'top 35%',scrub:true}});
   });
 });
 
-/* ── meters ── */
 (function(){
   document.querySelectorAll('.meter .fill').forEach(f=>f.style.setProperty('--w',f.dataset.w));
   const io=new IntersectionObserver(es=>es.forEach(e=>{
@@ -785,7 +774,6 @@ if(G) G.matchMedia().add('(min-width: 900px)',()=>{
   io.observe($('meters'));
 })();
 
-/* ── solver: convergence animation + scrubber ── */
 (function(){
   const range=$('solRange'),playBtn=$('solPlay'),iterEl=$('solIter'),massEl=$('solMass');
   if(!range) return;
@@ -828,7 +816,6 @@ if(G) G.matchMedia().add('(min-width: 900px)',()=>{
   };
   window.__solverRun=()=>{ t=0; phase='run'; mode='auto'; setPlaying(true) };
   setPlaying(playing); apply(); requestAnimationFrame(tick);
-  /* scrollytelling: the part optimizes as you scroll past (GSAP layer) */
   if(G){
     mode='scroll'; setPlaying(false);
     ScrollTrigger.create({
@@ -838,7 +825,6 @@ if(G) G.matchMedia().add('(min-width: 900px)',()=>{
   }
 })();
 
-/* ── github ledger ── */
 const DEMO_REPOS=[
   {name:'demo-repo-01',description:'Uplink offline — fallback data. Set GH_USER in the source.',language:'TypeScript',stargazers_count:128,pushed_at:new Date().toISOString(),html_url:'#'},
   {name:'grid-engine',description:'A layout engine with opinions about whitespace.',language:'Rust',stargazers_count:64,pushed_at:new Date(Date.now()-864e5*3).toISOString(),html_url:'#'},
@@ -880,7 +866,6 @@ function renderRepos(repos,live){
 })();
 setInterval(()=>{const c=$('ghCursor');c.style.visibility=c.style.visibility==='hidden'?'visible':'hidden'},530);
 
-/* ── footer: build hash + uptime ── */
 $('buildHash').textContent='#'+Math.random().toString(16).slice(2,9);
 const t0=Date.now();
 setInterval(()=>{
@@ -888,20 +873,17 @@ setInterval(()=>{
   $('uptime').textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');
 },1000);
 
-/* ── copy email ── */
 $('copyMail').addEventListener('click',async()=>{
   try{ await navigator.clipboard.writeText(CONTACT); toast('LinkedIn URL copied · <i>ready to paste</i>') }
   catch(e){ toast('Copy blocked — it\'s <i>linkedin.com/in/dillonbartramcis</i>') }
 });
 
-/* ── toast ── */
 let toastTimer=null;
 function toast(html){
   const t=$('toast'); t.innerHTML=html; t.classList.add('on');
   clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('on'),2600);
 }
 
-/* ── konami → chroma override ── */
 (function(){
   const code=['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
   let i=0,locked=false;
@@ -922,7 +904,6 @@ function toast(html){
   });
 })();
 
-/* ── vim keys ── */
 (function(){
   let lastG=0;
   addEventListener('keydown',e=>{
@@ -934,15 +915,13 @@ function toast(html){
   });
 })();
 
-/* ── tab-away title egg ── */
 (function(){
   const orig=document.title;
   document.addEventListener('visibilitychange',()=>{
-    document.title=document.hidden?'◱ paused — come back':orig;
+    document.title=document.hidden?'D:\\ paused — come back':orig;
   });
 })();
 
-/* ── terminal ── */
 (function(){
   const term=$('term'), out=$('tout'), input=$('tinput');
   const open=()=>{ term.classList.add('open'); setTimeout(()=>input.focus(),100) };
@@ -958,21 +937,39 @@ function toast(html){
     div.textContent=txt; out.appendChild(div); out.scrollTop=out.scrollHeight;
   };
   const CMDS={
-    help(){ print('available: help · whoami · ls · cat readme.md · neofetch · pet · solve · accent mint|tiffany|magenta|auto · theme light|dark · grid · turbo · history · sudo hire · git blame · coffee · barrel-roll · vim · rm -rf / · clear · exit\nalso: ⌘K / ctrl+K toggles this shell') },
+    help(){ print('available: help · whoami · ls · cd d: · dir · cat readme.md · neofetch · pet · solve · accent mint|tiffany|magenta|auto · theme light|dark · grid · turbo · history · sudo hire · git blame · coffee · barrel-roll · vim · rm -rf / · clear · exit\nalso: ⌘K / ctrl+K toggles this shell') },
     solve(){ const s=document.getElementById('solver'); if(s){ s.scrollIntoView({behavior:reduced?'auto':'smooth'}); window.__solverRun&&window.__solverRun() } print('re-running optimization from iter 000… watch the mass drop.','sys') },
     whoami(){ print('guest. clearance: visitor. vibe: immaculate.') },
     ls(){ print('work/  repos/  easter_eggs/  regrets/  node_modules/ (do not open)') },
+    'cd d:'(){ print('D:\\>','sys'); print('the home drive. always mounted. no defrag needed.','sys') },
+    dir(){ print(
+` Volume in drive D: is DILLON
+ Volume Serial Number is DB-2026
+
+ Directory of D:\\
+
+ work/            <DIR>
+ solver/          <DIR>
+ code/            <DIR>
+ about/           <DIR>
+ contact/         <DIR>
+ readme.md
+ easter_eggs.txt  <HIDDEN>
+
+               1 File(s)             ok bytes
+               5 Dir(s)     ∞ bytes free`) },
     grid(){ root.classList.toggle('gridon'); print(root.classList.contains('gridon')?'12-column grid: visible. judge accordingly.':'grid hidden. the alignment was real, trust it.','sys') },
     turbo(){ if(reduced){print('reduced motion is on — turbo performed in spirit.','sys');return} root.classList.add('turbo'); setTimeout(()=>root.classList.remove('turbo'),4000); print('marquee turbo engaged for 4s. why? exactly.') },
     history(){ hist.length?hist.forEach((h,n)=>print(String(n+1).padStart(3,' ')+'  '+h,'sys')):print('no history yet.','sys') },
     neofetch(){ print(
-`  ┌────┐  os: portfolio 6.0 (refined)
-  │ ◆  │  shell: this one
+`  ┌────┐  os: portfolio 6.1 (final)
+  │ D:\\│  shell: this one
   └────┘  theme: ${root.classList.contains('light')?'sleeve (light)':'void (dark)'}
           accent: ${root.dataset.zone} (${accMode})
           uptime: ${$('uptime').textContent}
           packages: ${G?'1 (gsap — invited, vetted)':'0 (artisanal, hand-rolled)'}
-          resolution: ${innerWidth}x${innerHeight}`) },
+          resolution: ${innerWidth}x${innerHeight}
+          host: dbcis.org`) },
     coffee(){ print('HTTP 418: I\'m a teapot. brewing refused.','err') },
     'barrel-roll'(){ if(reduced){print('reduced motion is on — barrel roll performed in spirit.','sys');return} document.body.classList.add('barrel'); setTimeout(()=>document.body.classList.remove('barrel'),1100); print('do a barrel roll!') },
     vim(){ print('you are now in vim. you can never leave. (hint: :q!)','err') },
@@ -980,7 +977,7 @@ function toast(html){
     ':wq'(){ print('changes saved to nowhere. escape granted.','sys'); setTimeout(close,400) },
     clear(){ out.innerHTML='' },
     exit(){ close() },
-    'cat readme.md'(){ print('# dillon bartram™ (he/him)\nsoftware engineer · public service · colorado.\nc# / python / t-sql by day, ollama by night.\nlinkedin: linkedin.com/in/dillonbartramcis') },
+    'cat readme.md'(){ print('# dillon bartram™ (he/him)\nsoftware engineer · public service · colorado.\nc# / python / t-sql by day, ollama by night.\nlinkedin: linkedin.com/in/dillonbartramcis\nhost: dbcis.org') },
     'git blame'(){ print('it was DNS. it is always DNS.','err') },
     'sudo hire'(){ print('[sudo] password accepted (we trust you).'); print('permission granted. opening secure channel…'); setTimeout(()=>window.open(CONTACT,'_blank','noopener'),900) },
     pet(){ print(
@@ -1022,9 +1019,8 @@ function toast(html){
   });
 })();
 
-/* ── console eggs ── */
-console.log('%c\n  ┌──────────────────────────────────┐\n  │  dillon bartram™ · portfolio 6.0 │\n  │  you opened the console.         │\n  │  obviously we should talk.       │\n  │  → linkedin.com/in/              │\n  │      dillonbartramcis            │\n  └──────────────────────────────────┘\n','color:#8FFFCB;font-family:monospace;font-size:12px');
-console.log('%con the page: ` or ⌘K terminal · j/k scroll · \'grid\' overlay · \'pet\' the dog · swatches in the rail · ↑↑↓↓←→←→BA','color:#FF2E9E;font-family:monospace');
+console.log('%c\n  ┌──────────────────────────────────┐\n  │  D:\\ dillon bartram™ · v6.1      │\n  │  you opened the console.         │\n  │  obviously we should talk.       │\n  │  → linkedin.com/in/              │\n  │      dillonbartramcis            │\n  └──────────────────────────────────┘\n','color:#8FFFCB;font-family:monospace;font-size:12px');
+console.log('%con the page: ` or ⌘K terminal · j/k scroll · \'grid\' overlay · \'pet\' the dog · \'dir\' the drive · swatches in the rail · ↑↑↓↓←→←→BA','color:#FF2E9E;font-family:monospace');
 console.table({type:{display:'Space Grotesk',mono:'Space Mono'},palette:{mint:'#8FFFCB',tiffany:'#2DE8DA',magenta:'#FF2E9E'}});
 </script>
 </body>

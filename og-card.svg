@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0V60" fill="none" stroke="#242D29" stroke-width="1"/>
+    </pattern>
+    <filter id="grain" x="0" y="0" width="1" height="1">
+      <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" result="n"/>
+      <feColorMatrix in="n" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .07 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+
+  <!-- background: void -->
+  <rect width="1200" height="630" fill="#0F1312"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity=".6"/>
+
+  <!-- left rail, mimicking the site chrome -->
+  <line x1="76" y1="0" x2="76" y2="630" stroke="#242D29" stroke-width="1"/>
+  <text x="38" y="46" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="22" fill="#8FFFCB" text-anchor="middle">D:\</text>
+  <text x="38" y="66" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8FFFCB" text-anchor="middle">_</text>
+  <!-- accent progress notch -->
+  <line x1="76" y1="0" x2="76" y2="220" stroke="#8FFFCB" stroke-width="2"/>
+
+  <!-- catalog metadata row -->
+  <g font-family="ui-monospace, Menlo, monospace" font-size="14" fill="#8A968F" letter-spacing="2">
+    <circle cx="132" cy="66" r="4" fill="#8FFFCB"/>
+    <text x="146" y="71">SOFTWARE ENGINEER · HE/HIM</text>
+    <text x="486" y="71">COUNTY GOVERNMENT · COLORADO</text>
+    <text x="854" y="71">PORTFOLIO · 2026</text>
+  </g>
+  <line x1="120" y1="94" x2="1140" y2="94" stroke="#242D29" stroke-width="1"/>
+
+  <!-- name lockup: DILLON on the left, BARTRAM right-aligned in mint -->
+  <g font-family="'Space Grotesk', system-ui, sans-serif" font-weight="700" letter-spacing="-6">
+    <text x="120" y="290" font-size="180" fill="#EDF2EE">DILLON</text>
+    <g text-anchor="end">
+      <text x="1100" y="450" font-size="180" fill="#8FFFCB">BARTRAM</text>
+      <text x="1140" y="370" font-size="42" fill="#FF2E9E" letter-spacing="0">™</text>
+    </g>
+  </g>
+
+  <!-- tagline -->
+  <text x="120" y="504" font-family="'Space Grotesk', system-ui, sans-serif" font-size="22" fill="#8A968F">
+    <tspan fill="#EDF2EE" font-weight="500">Software engineer in public service.</tspan>
+  </text>
+  <text x="120" y="532" font-family="'Space Grotesk', system-ui, sans-serif" font-size="22" fill="#8A968F">
+    Dependable, humane software for the people and animals closest to home.
+  </text>
+
+  <!-- footer row: URL + tiny arrow motif + barcode -->
+  <line x1="120" y1="570" x2="1140" y2="570" stroke="#242D29" stroke-width="1"/>
+  <text x="120" y="602" font-family="ui-monospace, Menlo, monospace" font-size="14" fill="#8FFFCB" letter-spacing="2">DBCIS.ORG</text>
+  <text x="240" y="602" font-family="ui-monospace, Menlo, monospace" font-size="14" fill="#8A968F" letter-spacing="2">→ SELECTED WORK · CODE · SOLVER</text>
+
+  <!-- hero arrow motif, cropped right -->
+  <g stroke="#8FFFCB" stroke-width="3" fill="none" opacity=".35">
+    <path d="M770 340 H1080 M1010 285 L1090 340 L1010 395"/>
+    <path d="M820 375 H970" opacity=".6"/>
+    <path d="M820 305 H930" opacity=".6"/>
+  </g>
+
+  <!-- barcode -->
+  <g transform="translate(1000,588)">
+    <rect x="0"  y="0" width="2" height="24" fill="#EDF2EE"/>
+    <rect x="4"  y="0" width="2" height="24" fill="#EDF2EE"/>
+    <rect x="8"  y="6" width="4" height="18" fill="#8FFFCB"/>
+    <rect x="14" y="0" width="2" height="24" fill="#EDF2EE"/>
+    <rect x="18" y="3" width="2" height="21" fill="#FF2E9E"/>
+    <rect x="22" y="0" width="4" height="24" fill="#EDF2EE"/>
+    <rect x="28" y="6" width="2" height="18" fill="#8FFFCB"/>
+    <rect x="32" y="0" width="2" height="24" fill="#EDF2EE"/>
+    <rect x="36" y="0" width="1" height="24" fill="#EDF2EE"/>
+    <rect x="39" y="3" width="2" height="21" fill="#FF2E9E"/>
+    <rect x="43" y="0" width="4" height="24" fill="#EDF2EE"/>
+    <rect x="49" y="0" width="2" height="24" fill="#EDF2EE"/>
+    <rect x="53" y="6" width="2" height="18" fill="#8FFFCB"/>
+    <rect x="57" y="0" width="2" height="24" fill="#EDF2EE"/>
+    <rect x="61" y="0" width="4" height="24" fill="#EDF2EE"/>
+    <rect x="67" y="0" width="2" height="24" fill="#EDF2EE"/>
+    <rect x="71" y="3" width="2" height="21" fill="#FF2E9E"/>
+    <rect x="75" y="0" width="2" height="24" fill="#EDF2EE"/>
+  </g>
+  <text x="1140" y="614" font-family="ui-monospace, Menlo, monospace" font-size="10" fill="#8A968F" text-anchor="end" letter-spacing="3">DB-2026</text>
+
+  <!-- top-right small mark: magenta plus (registration cross vibe) -->
+  <g stroke="#FF2E9E" stroke-width="2">
+    <line x1="1130" y1="52" x2="1130" y2="80"/>
+    <line x1="1116" y1="66" x2="1144" y2="66"/>
+  </g>
+</svg>
